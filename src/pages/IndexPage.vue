@@ -15,9 +15,6 @@ import { ref, onMounted } from "vue";
 const data = ref();
 
 onMounted(async () => {
-  data.value = await axios
-    .get("https://www.nseindia.com/api/quote-equity?symbol=TCS")
-    .then((r) => r.data);
-  consile.log(data.value);
+  console.log(import.meta.env);
 });
 </script>

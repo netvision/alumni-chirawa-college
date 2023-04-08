@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { LocalStorage } from "quasar";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDdyzllkY_ydJezmfbeW3YJcuUHn243x-c",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "allumni-chirawa.firebaseapp.com",
   projectId: "allumni-chirawa",
   storageBucket: "allumni-chirawa.appspot.com",
