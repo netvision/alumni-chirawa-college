@@ -5,11 +5,18 @@ const routes = [
     path: "/",
     component: () => import("layouts/AuthLayout.vue"),
     children: [
-      { path: "/", redirect: "/login" },
+      { path: "/", redirect: "/home" },
+      { path: "home", component: () => import("src/pages/IndexPage.vue") },
       { path: "login", component: () => import("src/pages/LoginPage.vue") },
       {
         path: "register",
         component: () => import("src/pages/RegisterPage.vue"),
+      },
+      {
+        path: "payment/:id",
+        name: "payment",
+        component: () => import("src/pages/PaymentPage.vue"),
+        props: true,
       },
     ],
     meta: { auth: false },
@@ -17,7 +24,7 @@ const routes = [
   {
     path: "/app",
     component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/IndexPage.vue") }],
+    children: [{ path: "", component: () => import("pages/ProfilePage.vue") }],
     meta: { auth: true },
   },
   {

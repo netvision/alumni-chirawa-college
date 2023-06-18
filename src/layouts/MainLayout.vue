@@ -22,7 +22,7 @@ import { LocalStorage } from "quasar";
 const router = useRouter();
 
 const user = LocalStorage.getItem("user");
-
+//console.log(user);
 const logout = () => {
   signout().then(() => {
     router.push("/login");

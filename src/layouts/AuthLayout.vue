@@ -2,6 +2,19 @@
 
 <template>
   <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar>
+        <q-toolbar-title>
+          <q-btn
+            stretch
+            flat
+            label="Chirawa College Alumni Asssociation"
+            to="/"
+          />
+        </q-toolbar-title>
+        <q-btn flat to="/login" icon="login" />
+      </q-toolbar>
+    </q-header>
     <q-page-container class="pt-0-important bg-auth">
       <q-page>
         <div class="row" style="height: 100vh">
